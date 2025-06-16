@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LinearDiscriminantAnalysis
 st.set_page_config(page_title="Titanic Survival Predictor", layout="centered")
 # Load and train inside app (for simplicity)
 @st.cache_data
@@ -27,7 +27,7 @@ def load_and_train():
 
     corr_matrix = df[features + ['Survived']].corr()
 
-    model = LogisticRegression()
+    model = LinearDiscriminantAnalysis()
     model.fit(X, y)
     return model, corr_matrix
 
