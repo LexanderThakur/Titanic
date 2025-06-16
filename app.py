@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.linear_model import LinearDiscriminantAnalysis
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 st.set_page_config(page_title="Titanic Survival Predictor", layout="centered")
 # Load and train inside app (for simplicity)
 @st.cache_data
